@@ -1,11 +1,10 @@
 package main_test
 
 import (
-  "testing"
-  "github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestStub(t *testing.T) {
-    assert.True(t, true, "This is good. Canary test passing")
+	assert.True(t, true, "This is good. Canary test passing")
 }
-
