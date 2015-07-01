@@ -2,47 +2,31 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"gopkg.in/yaml.v2"
+	"log"
 )
 
-
-// var data = `
-// a: Easy!
-// b:
-//   c: 2
-//   d: [3, 4]
-// `
-
-// type T struct {
-//         A string
-//         B struct{C int; D []int ",flow"}
-// }
-
-
-var data = `---
-project_name:
-  path: /api/v1/create_article
-  sqs: create_article
+var data = `
+project:
+  path: /api/v1/pathname
+  sqs: my_sqs_queue
 `
 
 type Config struct {
-	name string
-	mapping struct {
-		path string
-		queue string
+	PROJECT struct {
+		PATH string
+		SQS  string
 	}
 }
-
 
 func main() {
 	config := Config{}
 
 	err := yaml.Unmarshal([]byte(data), &config)
 
-        if err != nil {
-                log.Fatalf("error: %v", err)
-        }
-	
-        fmt.Printf("--- config:\n%v\n\n", config)
+	if err != nil {
+		log.Fatalf("error: %v", err)
+	}
+
+	fmt.Printf("--- config:\n%+v\n", config)
 }
