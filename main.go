@@ -7,16 +7,22 @@ import (
 )
 
 var data = `
-project:
-  path: /api/v1/pathname
-  sqs: my_sqs_queue
+mappings:
+  project1:
+    path: /api/v1/pathname1
+    sqs: my_sqs_queue1
+  project2:
+    path: /api/v1/pathname2
+    sqs: my_sqs_queue2
 `
 
 type Config struct {
-	PROJECT struct {
-		PATH string
-		SQS  string
-	}
+	Mappings map[string]Route
+}
+
+type Route struct {
+	PATH string
+	SQS  string
 }
 
 func main() {
