@@ -1,5 +1,5 @@
 ### HTTP(s) -> SQS Queue 
-![Build](https://travis-ci.org/markgandolfo/http-to-sqs.svg?branch=master)
+[![Build](https://travis-ci.org/markgandolfo/http-to-sqs.svg?branch=master)](https://travis-ci.org/markgandolfo/http-to-sqs)
 
 A simple golang service that will accept a http request at a specific url, and send the params to an sqs queue.
 
