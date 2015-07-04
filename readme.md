@@ -1,6 +1,8 @@
 ### HTTP(s) -> SQS Queue 
 [![Build](https://travis-ci.org/markgandolfo/http-to-sqs.svg?branch=master)](https://travis-ci.org/markgandolfo/http-to-sqs)
 
+[![Join the chat at https://gitter.im/markgandolfo/http-to-sqs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/markgandolfo/http-to-sqs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A simple golang service that will accept a http request at a specific url, and send the params to an sqs queue.
 
 There will be configuration via a config file (perhaps yaml), for example:
