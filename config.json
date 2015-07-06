@@ -1,0 +1,10 @@
+[
+    {
+	"Path": "/api/v1/pathname1",
+	"Queue": "my_sqs_queue1"
+    },
+    {
+	"Path": "/api/v1/pathname2",
+	"Queue": "my_sqs_queue2"
+    }
+]
