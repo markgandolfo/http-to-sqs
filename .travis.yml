@@ -3,3 +3,11 @@ language: go
 go:
   - 1.4.2
 
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/9f17329fdd78e149227b
+    on_success: change
+    on_failure: always
+    on_start: false
+
