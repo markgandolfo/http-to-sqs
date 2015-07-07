@@ -1,11 +1,15 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 )
 
 func main() {
-	data := readFile("config.json")
+	configFile := flag.String("config", "config.json", "Your config file")
+	flag.Parse()
+
+	data := readFile(*configFile)
 	config := parseJSON(data)
 
 	fmt.Printf("config:\n%+v\n", config)
