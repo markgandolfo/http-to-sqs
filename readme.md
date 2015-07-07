@@ -23,17 +23,17 @@ Configuration is in JSON
 
 #### Build
 
-    go build main.go json.go readfile.go
+    go build
 
 #### Running
 
 To see all available flags, please run
 
-    ./main --help
+    ./http-to-sqs --help
 
 Running without any switches will try to find the config file in the current directory called `config.json` or you can pass through a config file with the --config flag
 
-    ./main --config=config.json
+    ./http-to-sqs --config=config.json
 
 #### Running Tests
 
