@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	data := readFile("config.yml")
-	config := parseYaml(data)
+	data := readFile("config.json")
+	config := parseJSON(data)
 
-	fmt.Printf("--- config:\n%+v\n", config)
+	fmt.Printf("config:\n%+v\n", config)
 }
