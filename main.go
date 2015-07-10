@@ -13,6 +13,4 @@ func main() {
 	config := parseJSON(data)
 
 	fmt.Printf("config:\n%+v\n", config)
-
-	startServer(config)
 }
