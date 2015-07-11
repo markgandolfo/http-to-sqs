@@ -3,6 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/julienschmidt/httprouter"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -11,6 +14,10 @@ func main() {
 
 	data := readFile(*configFile)
 	config := parseJSON(data)
+	fmt.Println(config)
 
-	fmt.Printf("config:\n%+v\n", config)
+	router := httprouter.New()
+	router.GET("/*route", httpHandler)
+
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
